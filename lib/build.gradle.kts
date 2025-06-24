@@ -20,8 +20,8 @@ kotlin {
     compilerOptions {
         freeCompilerArgs.apply {
             add("-Xcontext-parameters")
-            add("-Xsuppress-warning=NOTHING_TO_INLINE")
-            add("-Xsuppress-warning=UNCHECKED_CAST")
+            add("-Xwarning-level=NOTHING_TO_INLINE:disabled")
+            add("-Xwarning-level=UNCHECKED_CAST:disabled")
         }
     }
     jvm()
