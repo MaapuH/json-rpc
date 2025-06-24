@@ -8,8 +8,6 @@ jobs:
     name: Release build and publish
     runs-on: macOS-latest
     steps:
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
       - name: Check out code
         uses: actions/checkout@v4
       - name: Set up JDK 21
@@ -17,6 +15,8 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: 21
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: Publish to MavenCentral
         run: ./gradlew publishToMavenCentral --no-configuration-cache
         env:
