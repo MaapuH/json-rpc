@@ -79,7 +79,7 @@ mavenPublishing {
         name = "JsonRPC"
         description = "JsonRPC for Kotlin, implemented using kotlinx.serialization"
         inceptionYear = "2025"
-        url = "https://github.com/MaapuH/json-rpc"
+        url = "https://github.com/MaapuH/jsonrpc"
         licenses {
             license {
                 name = "The Apache License, Version 2.0"
@@ -91,13 +91,13 @@ mavenPublishing {
             developer {
                 id = "maapuh"
                 name = "Alen MapuH"
-                url = "https://github.com/MaapuH"
+                url = "https://github.com/maapuh"
             }
         }
         scm {
-            url = "https://github.com/MaapuH/json-rpc"
-            connection = "scm:git:git://github.com/MaapuH/json-rpc.git"
-            developerConnection = "scm:git:ssh://git@github.com/MaapuH/json-rpc.git"
+            url = "https://github.com/MaapuH/jsonrpc"
+            connection = "scm:git:git://github.com/MaapuH/jsonrpc.git"
+            developerConnection = "scm:git:ssh://git@github.com/MaapuH/jsonrpc.git"
         }
     }
 }
