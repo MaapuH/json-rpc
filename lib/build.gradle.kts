@@ -13,7 +13,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "io.github.kotlin"
+group = "io.github.maapuh"
 version = "1.0.0"
 
 kotlin {
@@ -71,7 +71,7 @@ android {
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
 
-//    signAllPublications()
+    signAllPublications()
 
     coordinates(group.toString(), "jsonrpc", version.toString())
 
@@ -79,25 +79,25 @@ mavenPublishing {
         name = "JsonRPC"
         description = "JsonRPC for Kotlin, implemented using kotlinx.serialization"
         inceptionYear = "2025"
-        url = "https://github.com/kotlin/multiplatform-library-template/"
-//        licenses {
-//            license {
-//                name = "The Apache License, Version 2.0"
-//                url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
-//                distribution = "https://www.apache.org/licenses/LICENSE-2.0.txt"
-//            }
-//        }
+        url = "https://github.com/MaapuH/json-rpc"
+        licenses {
+            license {
+                name = "The Apache License, Version 2.0"
+                url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                distribution = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        }
         developers {
             developer {
                 id = "maapuh"
                 name = "Alen MapuH"
-                url = "https://github.com/maapuh/"
+                url = "https://github.com/MaapuH"
             }
         }
-//        scm {
-//            url = "https://github.com/kotlin-hands-on/fibonacci/"
-//            connection = "scm:git:git://github.com/kotlin-hands-on/fibonacci.git"
-//            developerConnection = "scm:git:ssh://git@github.com/kotlin-hands-on/fibonacci.git"
-//        }
+        scm {
+            url = "https://github.com/MaapuH/json-rpc"
+            connection = "scm:git:git://github.com/MaapuH/json-rpc.git"
+            developerConnection = "scm:git:ssh://git@github.com/MaapuH/json-rpc.git"
+        }
     }
 }
