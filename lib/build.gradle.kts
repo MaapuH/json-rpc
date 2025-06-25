@@ -33,7 +33,7 @@ kotlin {
     androidTarget {
         publishLibraryVariants("release")
         compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_20)
+            jvmTarget.set(JvmTarget.JVM_1_8)
         }
     }
 
@@ -56,8 +56,14 @@ kotlin {
         nodejs()
     }
 
-    wasmJs()
-    wasmWasi()
+    wasmJs {
+        browser()
+        nodejs()
+        d8()
+    }
+    wasmWasi {
+        nodejs()
+    }
 
     sourceSets {
         commonMain {
@@ -80,8 +86,8 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_20
-        targetCompatibility = JavaVersion.VERSION_20
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 

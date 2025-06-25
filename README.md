@@ -1,4 +1,4 @@
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.maapuh/jsonrpc?color=blue)](https://search.maven.org/search?q=g:io.github.maapuh)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.maapuh/kmp-jsonrpc?color=blue)](https://search.maven.org/search?q=g:io.github.maapuh)
 
 Kotlin DSL:
 
@@ -8,6 +8,6 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.maapuh:jsonrpc:1.0.0")
+    implementation("io.github.maapuh:kmp-jsonrpc:1.0.0")
 }
 ```
