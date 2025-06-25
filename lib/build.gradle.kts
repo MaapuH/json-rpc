@@ -74,7 +74,7 @@ kotlin {
 }
 
 android {
-    namespace = "$group.$artifactName"
+    namespace = "$group.$githubRepoName"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
