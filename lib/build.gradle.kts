@@ -16,6 +16,11 @@ plugins {
 group = "io.github.maapuh"
 version = "1.0.0"
 
+val githubNickname = "MaapuH"
+val githubRepoName = "kmp.jsonrpc"
+
+val artifactName = "kmp-jsonrpc"
+
 kotlin {
     compilerOptions {
         freeCompilerArgs.apply {
@@ -31,9 +36,18 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_20)
         }
     }
+
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+
+    watchosX64()
+    watchosArm64()
+    watchosSimulatorArm64()
+
+    tvosX64()
+    tvosArm64()
+    tvosSimulatorArm64()
 
     applyDefaultHierarchyTemplate()
 
@@ -41,6 +55,9 @@ kotlin {
         browser()
         nodejs()
     }
+
+    wasmJs()
+    wasmWasi()
 
     sourceSets {
         commonMain {
@@ -57,7 +74,7 @@ kotlin {
 }
 
 android {
-    namespace = "io.github.maapuh.jsonrpc"
+    namespace = "$group.$artifactName"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
@@ -73,13 +90,13 @@ mavenPublishing {
 
     signAllPublications()
 
-    coordinates(group.toString(), "jsonrpc", version.toString())
+    coordinates(group.toString(), artifactName, version.toString())
 
     pom {
-        name = "JsonRPC"
-        description = "JsonRPC for Kotlin, implemented using kotlinx.serialization"
+        name = "KMPJsonRPC"
+        description = "JsonRPC for Kotlin Multiplatform, implemented using kotlinx.serialization"
         inceptionYear = "2025"
-        url = "https://github.com/MaapuH/jsonrpc"
+        url = "https://github.com/$githubNickname/$githubRepoName"
         licenses {
             license {
                 name = "The Apache License, Version 2.0"
@@ -89,15 +106,15 @@ mavenPublishing {
         }
         developers {
             developer {
-                id = "maapuh"
+                id = githubNickname
                 name = "Alen MapuH"
-                url = "https://github.com/maapuh"
+                url = "https://github.com/$githubNickname"
             }
         }
         scm {
-            url = "https://github.com/MaapuH/jsonrpc"
-            connection = "scm:git:git://github.com/MaapuH/jsonrpc.git"
-            developerConnection = "scm:git:ssh://git@github.com/MaapuH/jsonrpc.git"
+            url = "https://github.com/$githubNickname/$githubRepoName"
+            connection = "scm:git:git://github.com/$githubNickname/$githubRepoName.git"
+            developerConnection = "scm:git:ssh://git@github.com/$githubNickname/$githubRepoName.git"
         }
     }
 }

@@ -7,13 +7,14 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
+    @Suppress("UnstableApiUsage")
     repositories {
         google()
         mavenCentral()
     }
 }
 
-rootProject.name = "json-rpc"
+rootProject.name = "kmp-jsonrpc"
 
 include(":lib")
 

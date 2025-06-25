@@ -53,10 +53,7 @@ data class JsonRPC20Request(
         JsonObject(params)
     )
 
-
-
     companion object {
-        const val INTERNAL_PREFIX = "rpc."
         inline fun build(
             id: String,
             method: String,
